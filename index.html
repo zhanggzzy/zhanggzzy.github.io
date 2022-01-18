@@ -6,10 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Refresh" content="5;url=http://github.com/zhanggzzy/zhanggzzy.github.io" />
     <title>GHome</title>
+    <script type="text/javascript">
+        window.onload = function() {
+	    	setInterval('countDown()',1000);    //一般秒设置为参数为1000
+        }
+
+        var sec = 5;
+        function countDown() {
+            if (sec >= 0) {
+                num.innerHTML -= 1;
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="container">
         hello world! (again)
+    </div>
+    <div>
+        <h1>
+            20220118 meta tag test
+        </h1>
+        <p>
+            count down
+            <div id="num">5</div>
+        </p>
     </div>
 </body>
 </html>
