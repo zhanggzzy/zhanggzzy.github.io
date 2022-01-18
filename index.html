@@ -4,33 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Refresh" content="5;url=http://zhanggzzy.github.io" />
     <title>GHome</title>
-    <script type="text/javascript">
-        window.onload = function() {
-	    	setInterval('countDown()',1000);    //一般秒设置为参数为1000
-        }
-
-        var sec = 5;
-        function countDown() {
-            if (sec >= 0) {
-                num.innerHTML -= 1;
-            }
-        }
-    </script>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 </head>
 <body>
-    <div id="container">
-        hello world! (again)
+    <div id="app">
+      <p>{{ message }}</p>
     </div>
-    <div>
-        <h1>
-            20220118 meta tag test, infinite self-direct.
-        </h1>
-        <p>
-            count down
-            <div id="num">5</div>
-        </p>
-    </div>
-</body>
+    
+    <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue.js!'
+      }
+    })
+    </script>
+    </body>
 </html>
