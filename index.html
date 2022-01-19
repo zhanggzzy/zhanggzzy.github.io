@@ -12,14 +12,32 @@
     <div id="app">
       <p>{{ message }}</p>
     </div>
-    <div id="countdown">
-        <h1>jump to baidu in 5 sec</h1>
+    <div id="countDown">
+      <input v-model="sec">
+      <h1>Count down from {{ sec }}</h1>
+      <h1>{{ count }}</h1>
     </div>
     <script>
     new Vue({
       el: '#app',
       data: {
         message: "Hello Marty and Jimmy, I'm Vue.js!"
+      }
+    })
+
+    var vm = new Vue({
+      el: '#countDown',
+      data: {
+        sec: 0,
+        count: 0
+      },
+      watch:{
+        count_down : function(val) {
+          this.count = this.sec;
+            for (;this.count>=0;this.count--){
+              continue;
+            }
+        }
       }
     })
     </script>
